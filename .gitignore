@@ -14,3 +14,4 @@ yarn.lock
 .babelrc
 bundle.js
 bundle.js.map
+.vscode

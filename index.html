@@ -10,25 +10,20 @@
     <!-- Header + Input -->
     <header>
         <h1>My Todo List !</h1>
-        <div class="input-section">
-            <input type="text" class="todo-input" placeholder="할 일을 입력해주세요">
-            <button type="button" class="submit-button">추가</button>
+        <div id="input-section">
+            <input type="text" class="todo-input" id="todo-input" placeholder="할 일을 입력해주세요" autofocus>
+            <button type="button" value="button" id="submit-button">추가</button>
         </div>
     </header>
 
-    <!-- painting todo list  -->
+    <!-- Painting todo list  -->
     <div class="container">
         <div class="todo-list-container">
 
-            <!-- Painting Uncomplete Todo List  -->
-            <div class="uncomplete-list-section">
+            <!-- Painting Incomplete Todo List  -->
+            <div class="incomplete-list-section">
                 <label>Uncomplete TODO</label>
-                <ul class="todo-list">
-                    <li>
-                        미완료 리스트
-                        <button class="edit-todo">수정</button>
-                        <button class="delete-todo"> X </button>
-                    </li>
+                <ul id="todo-list">                   
                 </ul>
             </div>
 

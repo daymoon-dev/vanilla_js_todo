@@ -12,6 +12,11 @@ body {
     margin: auto;
 }
 
+label { 
+    display: inline-block;
+    margin-top: 20px;
+}
+
 ul {
     padding: 0;
 }
@@ -19,6 +24,7 @@ ul {
 li {
     list-style: none;
     font-size: 0.7rem;
+    margin-bottom: .3em;
 }
 
 button {
@@ -28,6 +34,10 @@ button {
 
 .edit-todo {
     margin-left: 5px;
+}
+
+.complete-todo{
+    order: 1;
 }
 
 .input-section {
@@ -44,5 +54,5 @@ button {
 .division {
     width: 400px;
     border: 0.5px solid skyblue;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
 }
