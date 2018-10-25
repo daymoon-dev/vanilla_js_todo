@@ -56,3 +56,8 @@ button {
     border: 0.5px solid skyblue;
     margin: 0 auto 20px auto;
 }
+
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+    color: gray;
+}
