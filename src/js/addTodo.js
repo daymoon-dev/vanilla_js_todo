@@ -2,25 +2,27 @@
 let tdcount = 1;
 
 // Create Template
-createTemplate = (todoTxt) => {
+createTemplate = todoTxt => {
     // Create Elements
     const li = document.createElement('li'),                // List
           label = document.createElement('label'),          // To-do Text
           editBtn = document.createElement('button'),       // Edit Button
-          deleteBtn = document.createElement('button'),     // Delete Button
+          deleteBtn = document.createElement('input'),     // Delete Button
           checkBox = document.createElement('input');       // Checkbox
     
     // Set Attribute of Elements
-    label.innerHTML = todoTxt.value.trim();                        // Get Input Form Value 
+    label.innerHTML = todoTxt.value.trim();                 // Get Input Form Value 
     editBtn.className = 'edit-todo';                        // Set Edit Button Classname
-    deleteBtn.className = 'delete-todo';                    // Set Delete Button Classname
-    checkBox.setAttribute('onclick', 'complete(this)');
     checkBox.type = 'checkbox';                             // Set Input type (checkbox)
+    checkBox.setAttribute('onclick', 'complete(this)');     //
     editBtn.innerHTML = '수정';                              // Set Text in Edit Button
+    deleteBtn.type = 'button';
+    deleteBtn.className = 'delete-todo';                    // Set Delete Button Classname
     deleteBtn.innerHTML = ' X ';                            // Set Text in Delete Button
+    deleteBtn.setAttribute('onclick', 'deletetodo(this)');
 
     // Appending Todo Elements in List
-    li.appendChild(checkBox)
+    li.appendChild(checkBox);
     li.appendChild(label);
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
@@ -34,7 +36,7 @@ createTemplate = (todoTxt) => {
 }
 
 // Add Template in Incomplete Section
-addTemplate = () => {
+addTemplate = e => {
     const input = document.getElementById('todo-input'),    // Input Form
           ul = document.getElementById('todo-list'),        // Incomplete List
           template = createTemplate(input);                 // To-do Template
@@ -42,6 +44,7 @@ addTemplate = () => {
     // When the input form is empty
     if ( input.value === '' ) {
         alert('Please Input Text...');
+        e.preventDefault();
     } else {
         // Appending List Template
         ul.insertBefore(template, ul.childNodes[0]);
@@ -52,7 +55,7 @@ addTemplate = () => {
 }
 
 // When the Enterkey Press
-keydown = (e) => {
+keydown = e => {
     if(e.keyCode === 13){
         addTemplate();
     };
