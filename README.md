@@ -1,3 +1,18 @@
-# vanilla_js_todo
+# Vanilla Javascript Todo List
 
-#### javascript Todo 리스트
+### Tech Stack
+- Markup Language
+  - HTML
+  
+- Style Sheet
+  - CSS(SASS)
+  
+- Programming Language
+  - Javascript
+ 
+- etc.
+  - Webpack
+  - Babel
+  
+## 보완 해야할 점
+- ...
